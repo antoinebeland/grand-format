@@ -1,4 +1,4 @@
-/***** Colors *****/
+// ***** Colors *****
 $black: #000;
 $very-dark-gray: #212121;
 $dark-gray: #333;
@@ -6,7 +6,7 @@ $medium-dark-gray: #454545;
 $medium-gray: #666;
 $medium-light-gray: #c5c5c5;
 $gray: #ddd;
-$light-gray: #eeeeee;
+$light-gray: #eee;
 $very-light-gray: #f1f1f1;
 $white: #fff;
 $blue: #07a;
@@ -20,7 +20,7 @@ $headings-small-color: $medium-dark-gray;
 $legend-caption-color: $medium-gray;
 $paragraph-color: $dark-gray;
 
-/***** Fonts *****/
+// ***** Fonts *****
 $default-font-family: 'Open Sans', sans-serif;
 $heading-font-family: 'Roboto', sans-serif;
 
@@ -28,10 +28,10 @@ $default-font-size: 1.3em;
 $medium-large-screen-font-size: 1.15em;
 $small-medium-screen-font-size: 1em;
 
-$fig-caption-font-size: 0.85em;
-$footer-font-size: 0.85em;
+$fig-caption-font-size: .85em;
+$footer-font-size: .85em;
 
-/***** Dimensions *****/
+// ***** Dimensions *****
 $small-screen: 576px;
 $medium-screen: 768px;
 $large-screen: 992px;
@@ -40,7 +40,7 @@ $extra-large-screen: 1200px;
 $max-main-width: 725px;
 $max-media-wrapper-width: $max-main-width * 1.5;
 
-/***** Margin *****/
+// ***** Margin *****
 $article-margin-bottom: 2.5em;
 $footer-margin-top: 2.5em;
 $full-page-margin: 2.5em 0;
@@ -49,6 +49,6 @@ $media-wrapper-margin: 2.5em 0;
 $media-wrapper-margin-item: 15px;
 $paragraph-margin: 1.5em 0;
 
-/***** Padding *****/
+// ***** Padding *****
 $main-left-right-padding: 20px;
 $main-padding: 0 $main-left-right-padding;

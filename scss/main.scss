@@ -1,18 +1,27 @@
-@import "./constants";
-@import "../node_modules/normalize.css/normalize";
+@import './constants';
+@import '../node_modules/normalize.css/normalize';
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,500');
 
-/***** General Style *****/
+// ***** Mixin *****
+
+// See: https://stackoverflow.com/questions/12788262/sass-browser-vendor-prefixes
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
+
+// ***** General Style *****
 * {
   box-sizing: border-box;
 }
 
 html,
 body {
-  padding: 0;
   margin: 0;
   overflow-x: hidden;
+  padding: 0;
 }
 
 body {
@@ -46,21 +55,21 @@ a {
 
 blockquote,
 p {
+  color: $paragraph-color;
   line-height: 1.5em;
   margin: $paragraph-margin;
-  color: $paragraph-color;
 }
 
 figure {
   margin: 0;
 
   figcaption {
-    line-height: 1.5em;
-    margin: 0.5em 0;
     color: $legend-caption-color;
     font-family: $heading-font-family;
     font-size: $fig-caption-font-size;
     font-weight: 500;
+    line-height: 1.5em;
+    margin: .5em 0;
   }
 }
 
@@ -77,29 +86,29 @@ aside {
 }
 
 article:not(:last-child) {
-  margin-bottom: $article-margin-bottom;
   border-bottom: 1px solid $article-border-color;
+  margin-bottom: $article-margin-bottom;
 }
 
-/***** Generic Classes *****/
+// ***** Generic Classes *****
 .light {
   color: $white;
 }
 
 .full-page {
-  position: relative;
   height: 100vh;
-  width: 100vw;
-  text-align: center;
   overflow: hidden;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+  position: relative;
+  text-align: center;
+  text-shadow: 1px 1px 10px $black;
+  width: 100vw;
 
   > .caption {
+    font-size: 1.7em;
+    left: 50%;
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.7em;
 
     &,
     * {
@@ -109,24 +118,21 @@ article:not(:last-child) {
 
   > img,
   > video {
+    @include vendor-prefix(user-select, none);
+    height: 100vh;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
     -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    width: 100vw;
     z-index: -1;
   }
 }
 
 .media-wrapper {
   display: flex;
-  margin: $media-wrapper-margin;
   justify-content: space-between;
+  margin: $media-wrapper-margin;
 
   > .media {
     flex: 1;
@@ -142,12 +148,12 @@ article:not(:last-child) {
   }
 }
 
-/***** Page *****/
+// ***** Page *****
 main,
 footer {
-  padding: $main-padding;
   margin: $main-margin;
   max-width: $max-main-width;
+  padding: $main-padding;
 }
 
 
@@ -158,27 +164,27 @@ main {
   }
 
   .media-wrapper {
-    width: $max-media-wrapper-width;
     margin-left: -1 * ($max-media-wrapper-width - $max-main-width) / 2 - $main-left-right-padding;
+    width: $max-media-wrapper-width;
   }
 }
 
 footer {
-  margin-top: $footer-margin-top;
   border-top: 1px solid $footer-border-color;
   font-family: $heading-font-family;
   font-size: $footer-font-size;
+  margin-top: $footer-margin-top;
 
   p {
-    color: $footer-paragraph-color
+    color: $footer-paragraph-color;
   }
 }
 
-/***** Mobile *****/
+// ***** Mobile *****
 @media screen and (max-width: $max-media-wrapper-width) {
   main .media-wrapper {
-    width: 100%;
     margin-left: 0;
+    width: 100%;
   }
 }
 
