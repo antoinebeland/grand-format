@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
-    "build": ""
+    "build": "gulp scss",
+    "lint": "gulp scss-lint"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,8 @@
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-header": "^2.0.5",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.1",
+    "gulp-scss-lint": "^0.6.1"
   },
   "dependencies": {
     "normalize.css": "^8.0.0"
