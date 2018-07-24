@@ -12,7 +12,7 @@ Quick Start
 To use the library, you have several options:
 
 - Use the latest [version](https://raw.githubusercontent.com/antoinebeland/grand-format/master/dist/grand-format.css) 
-of the master branch
+of the master branch (see `dist` folder)
 - Clone the repo: `git clone https://github.com/antoinebeland/grand-format.git`
 
 Be sure to include `grand-format.css` file in your HTML file before to start.
@@ -65,10 +65,80 @@ with the class `caption`. Take a look at the following examples:
 ```
 
 ### `media-wrapper`
-This class is used 
+This class is used to display one or more images/videos on a single line. The element that uses `media-wrapper` class 
+appears 150% larger than a paragraph length. This creates a nice effect to emphasize on the media elements.
 
+When you use the `media-wrapper` class, you must use `media` class as direct children. Take a look at the following 
+examples:
 
+```html
+<!-- A single image in a media wrapper -->
+<div class="media-wrapper">
+  <div class="media">
+    <img alt="Moraine Lake" 
+      src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Moraine_Lake_17092005.jpg">
+  </div>
+</div>
 
+<!-- A single image in a media wrapper with a caption -->
+<div class="media-wrapper">
+  <figure class="media">
+    <img alt="Moraine Lake" 
+      src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Moraine_Lake_17092005.jpg">
+    <figcaption>Moraine Lake</figcaption>
+  </figure>
+</div>
+
+<!-- Two images in a media wrapper with captions -->
+<div class="media-wrapper">
+  <figure class="media">
+    <img alt="Moraine Lake" 
+      src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Moraine_Lake_17092005.jpg">
+    <figcaption>Moraine Lake</figcaption>
+  </figure>
+  <figure class="media">
+    <img alt="Moraine Lake" 
+      src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Moraine_Lake-Banff_NP.JPG">
+    <figcaption>Moraine Lake</figcaption>
+  </figure>
+</div>
+```
+
+Source Code
+-----------
+The source code is located in the `scss` folder. The stylesheets are written is [SCSS](https://sass-lang.com/) language. 
+There are only two files in the projet:
+
+- `constants.scss`: define the constants used in the `main.scss` file (e.g. colors, dimensions, fonts, margins, etc.)
+- `main.scss`: define the style rules (classes, elements, etc.) 
+
+### Modifications
+
+If you are interested to modify the source code, you can clone the repo and read the following instructions.
+
+After cloning the repository, you have to install all the node modules required for the gulp tasks
+with the following command:
+```
+npm install
+```
+
+Once the dependencies are installed, you have to start the file watcher that automatically compile SCSS files on change.
+The compiled file is generated in the `dist` folder. To start the file watcher, you have to type the following command:
+
+```
+npm start
+```
+
+After your modifications, you can run the SASS linter on your code with the following command:
+
+```
+npm run lint
+```
+
+Issues
+------
+If you find any issues with the library, don't hesitate to open a 
+[new issue](https://github.com/antoinebeland/grand-format/issues/new).
 
 License
 -------
