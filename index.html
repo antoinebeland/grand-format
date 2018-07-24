@@ -81,10 +81,10 @@
 
     <p>Grand Format &mdash;	 &copy; Antoine Béland</p>
   </footer>
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script async defer src="./js/buttons.js"></script>
   <script>
     let isPlaying = false;
-    document.querySelector('body').addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
       if (!isPlaying) {
         document.querySelector('#video').play();
         isPlaying = true;
