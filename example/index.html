@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Demo | Grand Format</title>
+
   <link rel="stylesheet" href="../dist/grand-format.css">
   <style>
     .ref {
@@ -56,6 +58,7 @@
       <div class="full-page">
         <video id="video" autoplay loop muted>
           <source src="./videos/waterfall.webm" type="video/webm">
+          <source src="./videos/waterfall.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="caption">
@@ -79,10 +82,10 @@
 
     <p>Grand Format &mdash;	 &copy; Antoine Béland</p>
   </footer>
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script async defer src="./js/buttons.js"></script>
   <script>
     let isPlaying = false;
-    document.querySelector('body').on('scroll', () => {
+    window.addEventListener('scroll', () => {
       if (!isPlaying) {
         document.querySelector('#video').play();
         isPlaying = true;
