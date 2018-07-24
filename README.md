@@ -66,9 +66,9 @@ with the class `caption`. Take a look at the following examples:
 
 ### `media-wrapper`
 This class is used to display one or more images/videos on a single line. The element that uses `media-wrapper` class 
-appears 150% larger than a paragraph length. This creates a nice effect to emphasize on the media elements.
+appears 150% larger than a paragraph width. This creates a nice effect to emphasize on the media elements.
 
-When you use the `media-wrapper` class, you must use `media` class as direct children. Take a look at the following 
+When you use the `media-wrapper` class, you must use `media` class as direct child. Take a look at the following 
 examples:
 
 ```html
