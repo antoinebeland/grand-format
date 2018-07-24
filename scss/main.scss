@@ -187,3 +187,15 @@ footer {
     left: -1 * $main-left-right-padding;
   }
 }
+
+@media screen and (max-width: $large-screen) {
+  body {
+    font-size: $medium-large-screen-font-size;
+  }
+}
+
+@media screen and (max-width: $medium-screen) {
+  body {
+    font-size: $small-medium-screen-font-size;
+  }
+}

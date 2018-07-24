@@ -25,10 +25,18 @@ $default-font-family: 'Open Sans', sans-serif;
 $heading-font-family: 'Roboto', sans-serif;
 
 $default-font-size: 1.3em;
+$medium-large-screen-font-size: 1.15em;
+$small-medium-screen-font-size: 1em;
+
 $fig-caption-font-size: 0.85em;
 $footer-font-size: 0.85em;
 
 /***** Dimensions *****/
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$extra-large-screen: 1200px;
+
 $max-main-width: 725px;
 $max-media-wrapper-width: $max-main-width * 1.5;
 
