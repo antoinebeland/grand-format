@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
   <title>Demo | Grand Format</title>
+
   <link rel="stylesheet" href="https://cdn.rawgit.com/antoinebeland/grand-format/master/dist/grand-format.css">
   <style>
     .ref {
@@ -82,7 +84,7 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script>
     let isPlaying = false;
-    document.querySelector('body').on('scroll', () => {
+    document.querySelector('body').addEventListener('scroll', () => {
       if (!isPlaying) {
         document.querySelector('#video').play();
         isPlaying = true;
