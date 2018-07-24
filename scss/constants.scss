@@ -1,0 +1,46 @@
+/***** Colors *****/
+$black: #000;
+$very-dark-gray: #212121;
+$dark-gray: #333;
+$medium-dark-gray: #454545;
+$medium-gray: #666;
+$medium-light-gray: #c5c5c5;
+$gray: #ddd;
+$light-gray: #eeeeee;
+$very-light-gray: #f1f1f1;
+$white: #fff;
+$blue: #07a;
+$dark-blue: #00577b;
+
+$article-border-color: $medium-light-gray;
+$footer-border-color: $medium-light-gray;
+$footer-paragraph-color: $medium-gray;
+$headings-color: $very-dark-gray;
+$headings-small-color: $medium-dark-gray;
+$legend-caption-color: $medium-gray;
+$paragraph-color: $dark-gray;
+
+/***** Fonts *****/
+$default-font-family: 'Open Sans', sans-serif;
+$heading-font-family: 'Roboto', sans-serif;
+
+$default-font-size: 1.3em;
+$fig-caption-font-size: 0.85em;
+$footer-font-size: 0.85em;
+
+/***** Dimensions *****/
+$max-main-width: 725px;
+$max-media-wrapper-width: $max-main-width * 1.5;
+
+/***** Margin *****/
+$article-margin-bottom: 2.5em;
+$footer-margin-top: 2.5em;
+$full-page-margin: 2.5em 0;
+$main-margin: 3em auto;
+$media-wrapper-margin: 2.5em 0;
+$media-wrapper-margin-item: 15px;
+$paragraph-margin: 1.5em 0;
+
+/***** Padding *****/
+$main-left-right-padding: 20px;
+$main-padding: 0 $main-left-right-padding;

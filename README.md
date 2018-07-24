@@ -1,2 +1,4 @@
-# grand-format
-A JavaScript library to easily create an interactive storytelling.
+grand-format
+============
+
+A tiny CSS library to easily create a storytelling article.
