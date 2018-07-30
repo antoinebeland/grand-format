@@ -39,6 +39,8 @@ $extra-large-screen: 1200px;
 
 $max-main-width: 725px;
 $max-media-wrapper-width: $max-main-width * 1.5;
+$max-side-media-wrapper-width: $max-main-width * 1.85;
+$side-media-element-width: ($max-side-media-wrapper-width - $max-main-width) / 2 - 30;
 
 // ***** Margin *****
 $article-margin-bottom: 2.5em;

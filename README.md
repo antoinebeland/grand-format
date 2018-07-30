@@ -104,6 +104,25 @@ examples:
 </div>
 ```
 
+### `side-media-wrapper`
+This class is used to display an element on the right side of the page. This is useful to display extra content related to
+the article, like a map. Take a look at the following examples:
+
+```html
+<!-- A single image in a side media wrapper -->
+<div class="side-media-wrapper">
+  <img alt="Alberta Map" src="https://upload.wikimedia.org/wikipedia/commons/5/52/Alberta_map.png">
+</div>
+
+<!-- A single image in a side media wrapper with a caption -->
+<div class="side-media-wrapper">
+  <figure>
+    <img alt="Alberta Map" src="https://upload.wikimedia.org/wikipedia/commons/5/52/Alberta_map.png">
+    <figcaption>Alberta Map</figcaption>
+  </figure>
+</div>
+```
+
 Source Code
 -----------
 The source code is located in the `scss` folder. The stylesheets are written is [SCSS](https://sass-lang.com/) language. 

@@ -91,11 +91,8 @@ article:not(:last-child) {
 }
 
 // ***** Generic Classes *****
-.light {
-  color: $white;
-}
-
 .full-page {
+  clear: both;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -130,6 +127,7 @@ article:not(:last-child) {
 }
 
 .media-wrapper {
+  clear: both;
   display: flex;
   justify-content: space-between;
   margin: $media-wrapper-margin;
@@ -145,6 +143,18 @@ article:not(:last-child) {
 
   .media + .media {
     margin-left: $media-wrapper-margin-item;
+  }
+}
+
+.side-media-wrapper {
+  clear: both;
+
+  > * {
+    float: right;
+  }
+
+  * {
+    width: $side-media-element-width;
   }
 }
 
@@ -167,6 +177,11 @@ main {
     margin-left: -1 * ($max-media-wrapper-width - $max-main-width) / 2 - $main-left-right-padding;
     width: $max-media-wrapper-width;
   }
+
+  .side-media-wrapper {
+    margin-left: -1 * ($max-side-media-wrapper-width - $max-main-width) / 2 - $main-left-right-padding;
+    width: $max-side-media-wrapper-width;
+  }
 }
 
 footer {
@@ -181,8 +196,16 @@ footer {
 }
 
 // ***** Mobile *****
+@media screen and (max-width: $max-side-media-wrapper-width) {
+  main .side-media-wrapper {
+    margin-left: -1 * ($max-media-wrapper-width - $max-main-width) / 2 - $main-left-right-padding;
+    width: $max-media-wrapper-width;
+  }
+}
+
 @media screen and (max-width: $max-media-wrapper-width) {
-  main .media-wrapper {
+  main .media-wrapper,
+  main .side-media-wrapper {
     margin-left: 0;
     width: 100%;
   }
