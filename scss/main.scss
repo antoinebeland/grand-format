@@ -151,10 +151,13 @@ article:not(:last-child) {
 
   > * {
     float: right;
-  }
+    max-width: 100%;
+    padding: $side-media-element-padding;
+    position: relative;
 
-  * {
-    width: $side-media-element-width;
+    * {
+      width: 100%;
+    }
   }
 }
 
@@ -226,5 +229,11 @@ footer {
 @media screen and (max-width: $medium-screen) {
   body {
     font-size: $small-medium-screen-font-size;
+  }
+}
+
+@media screen and (max-width: $side-media-element-width + $main-left-right-padding * 2) {
+  main .side-media-wrapper > * {
+    padding-left: 0;
   }
 }
