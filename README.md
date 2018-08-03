@@ -127,7 +127,7 @@ the article, like a map. Take a look at the following examples:
 Source Code
 -----------
 The source code is located in the `scss` folder. The stylesheets are written is [SCSS](https://sass-lang.com/) language. 
-There are only two files in the projet:
+There are only two files in the project:
 
 - `constants.scss`: define the constants used in the `main.scss` file (e.g. colors, dimensions, fonts, margins, etc.)
 - `main.scss`: define the style rules (classes, elements, etc.) 
