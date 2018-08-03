@@ -14,6 +14,7 @@ To use the library, you have several options:
 - Use the latest [version](https://raw.githubusercontent.com/antoinebeland/grand-format/master/dist/grand-format.css) 
 of the master branch (see `dist` folder)
 - Clone the repo: `git clone https://github.com/antoinebeland/grand-format.git`
+- Install with [npm](https://www.npmjs.com/package/grand-format): `npm install grand-format`
 
 Be sure to include `grand-format.css` file in your HTML file before to start.
 
