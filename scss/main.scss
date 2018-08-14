@@ -19,9 +19,9 @@
 
 html,
 body {
+  padding: 0;
   margin: 0;
   overflow-x: hidden;
-  padding: 0;
 }
 
 body {
@@ -35,12 +35,12 @@ h3,
 h4,
 h5,
 h6 {
-  color: $headings-color;
   font-family: $heading-font-family;
+  color: $headings-color;
 
   small {
-    color: $headings-small-color;
     font-weight: 500;
+    color: $headings-small-color;
   }
 }
 
@@ -55,21 +55,21 @@ a {
 
 blockquote,
 p {
-  color: $paragraph-color;
-  line-height: 1.5em;
   margin: $paragraph-margin;
+  line-height: 1.5em;
+  color: $paragraph-color;
 }
 
 figure {
   margin: 0;
 
   figcaption {
-    color: $legend-caption-color;
+    margin: .5em 0;
     font-family: $heading-font-family;
     font-size: $fig-caption-font-size;
     font-weight: 500;
     line-height: 1.5em;
-    margin: .5em 0;
+    color: $legend-caption-color;
   }
 }
 
@@ -86,25 +86,25 @@ aside {
 }
 
 article:not(:last-child) {
-  border-bottom: 1px solid $article-border-color;
   margin-bottom: $article-margin-bottom;
+  border-bottom: 1px solid $article-border-color;
 }
 
 // ***** Generic Classes *****
 .full-page {
-  clear: both;
+  position: relative;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
-  position: relative;
+  clear: both;
   text-align: center;
   text-shadow: 1px 1px 10px $black;
-  width: 100vw;
 
   > .caption {
-    font-size: 1.7em;
-    left: 50%;
     position: absolute;
     top: 50%;
+    left: 50%;
+    font-size: 1.7em;
     transform: translate(-50%, -50%);
 
     &,
@@ -116,21 +116,21 @@ article:not(:last-child) {
   > img,
   > video {
     @include vendor-prefix(user-select, none);
-    height: 100vh;
-    left: 0;
     position: absolute;
     top: 0;
-    -webkit-touch-callout: none;
-    width: 100vw;
+    left: 0;
     z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    -webkit-touch-callout: none;
   }
 }
 
 .media-wrapper {
-  clear: both;
   display: flex;
-  justify-content: space-between;
   margin: $media-wrapper-margin;
+  clear: both;
+  justify-content: space-between;
 
   > .media {
     flex: 1;
@@ -150,10 +150,10 @@ article:not(:last-child) {
   clear: both;
 
   > * {
+    position: relative;
     float: right;
     max-width: 100%;
     padding: $side-media-element-padding;
-    position: relative;
 
     * {
       width: 100%;
@@ -164,9 +164,9 @@ article:not(:last-child) {
 // ***** Page *****
 main,
 footer {
-  margin: $main-margin;
   max-width: $max-main-width;
   padding: $main-padding;
+  margin: $main-margin;
 }
 
 
@@ -177,21 +177,21 @@ main {
   }
 
   .media-wrapper {
-    margin-left: -1 * ($max-media-wrapper-width - $max-main-width) / 2 - $main-left-right-padding;
     width: $max-media-wrapper-width;
+    margin-left: -1 * ($max-media-wrapper-width - $max-main-width) / 2 - $main-left-right-padding;
   }
 
   .side-media-wrapper {
-    margin-left: -1 * ($max-side-media-wrapper-width - $max-main-width) / 2 - $main-left-right-padding;
     width: $max-side-media-wrapper-width;
+    margin-left: -1 * ($max-side-media-wrapper-width - $max-main-width) / 2 - $main-left-right-padding;
   }
 }
 
 footer {
-  border-top: 1px solid $footer-border-color;
+  margin-top: $footer-margin-top;
   font-family: $heading-font-family;
   font-size: $footer-font-size;
-  margin-top: $footer-margin-top;
+  border-top: 1px solid $footer-border-color;
 
   p {
     color: $footer-paragraph-color;
@@ -201,16 +201,16 @@ footer {
 // ***** Mobile *****
 @media screen and (max-width: $max-side-media-wrapper-width) {
   main .side-media-wrapper {
-    margin-left: -1 * ($max-media-wrapper-width - $max-main-width) / 2 - $main-left-right-padding;
     width: $max-media-wrapper-width;
+    margin-left: -1 * ($max-media-wrapper-width - $max-main-width) / 2 - $main-left-right-padding;
   }
 }
 
 @media screen and (max-width: $max-media-wrapper-width) {
   main .media-wrapper,
   main .side-media-wrapper {
-    margin-left: 0;
     width: 100%;
+    margin-left: 0;
   }
 }
 

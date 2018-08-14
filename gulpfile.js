@@ -18,7 +18,8 @@ const scssLint = require('gulp-scss-lint');
 gulp.task('scss-lint', function() {
   return gulp.src(`${CONSTANTS.STYLES_DIRECTORY}/*.scss`)
     .pipe(scssLint({
-      reporterOutput: 'scssReport.json',
+      config: 'lint.yml',
+      reporterOutputFormat: 'Checkstyle'
     }));
 });
 
